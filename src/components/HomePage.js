@@ -1,6 +1,7 @@
 import * as React from "react";
+import Link from "next/link";
 
-import { Button, Grid, Link, Typography, useMediaQuery } from "@mui/material";
+import { Button, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 
 
@@ -119,7 +120,7 @@ function HomePage() {
           </Typography>
         </Grid>
         <Grid item>
-          <Link href="/register" passHref>
+          <Link href="/register" passHref >
             <Button variant="contained"> به آسانی شروع کنید</Button>
           </Link>
         </Grid>
