@@ -74,7 +74,6 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
     if (!Object.keys(errors).length) {
       addUser({ ...data});
       handleNext();
-      console.log(JSON.stringify(data, null, 2));
     }
   };
 
