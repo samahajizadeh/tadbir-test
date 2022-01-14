@@ -6,51 +6,48 @@ function SkeletonPersonal() {
   return (
     <Fragment>
       <Grid container sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <Skeleton animation="wave" variant="rectangular" height={40} />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <Skeleton
             animation="wave"
             variant="rectangular"
             height={40}
-            sx={{ ml: 2 }}
           />
         </Grid>
       </Grid>
       <Grid container sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={12} sx={{px:2}}>
           <Skeleton animation="wave" variant="rectangular" height={40} />
         </Grid>
       </Grid>
       <Grid container sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={12} sx={{px:2}}>
           <Skeleton animation="wave" variant="rectangular" height={40} />
         </Grid>
       </Grid>
       <Grid container sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <Skeleton animation="wave" variant="rectangular" height={40} />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <Skeleton
             animation="wave"
             variant="rectangular"
             height={40}
-            sx={{ ml: 2 }}
           />
         </Grid>
       </Grid>
       <Grid container sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <Skeleton animation="wave" variant="rectangular" height={40} />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <Skeleton
             animation="wave"
             variant="rectangular"
             height={40}
-            sx={{ ml: 2 }}
           />
         </Grid>
       </Grid>

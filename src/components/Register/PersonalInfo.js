@@ -80,7 +80,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
   return (
     <Fragment>
       <Grid container spacing={breakpointMd ? 0 : 2} sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <TextField
             fullWidth
             label="نام"
@@ -96,7 +96,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
             {...register("name")}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <TextField
             fullWidth
             label="نام خانوادگی"
@@ -114,7 +114,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
         </Grid>
       </Grid>
       <Grid container spacing={breakpointMd ? 0 : 2} sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={12} sx={{px:2}}>
           <FormControl
             fullWidth
             size="small"
@@ -141,7 +141,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
         </Grid>
       </Grid>
       <Grid container spacing={breakpointMd ? 0 : 2} sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={12} sx={{px:2}}>
           <FormControl
             fullWidth
             size="small"
@@ -169,7 +169,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
         </Grid>
       </Grid>
       <Grid container spacing={breakpointMd ? 0 : 2} sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <FormControl
             fullWidth
             sx={{ my: 1 }}
@@ -208,7 +208,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
             )}
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <FormControl
             fullWidth
             sx={{ my: 1 }}
@@ -254,7 +254,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
         </Grid>
       </Grid>
       <Grid container spacing={breakpointMd ? 0 : 2} sx={{ mb: 1 }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <TextField
             fullWidth
             label="کدمعرف"
@@ -268,7 +268,7 @@ function PersonalInfo({ activeStep, handleBack, handleNext }) {
             // sx={{ ...theme.typography.customInput }}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{px:2}}>
           <TextField
             fullWidth
             label="کدشعبه"
