@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import dynamic from "next/dynamic";
 
 //material-ui
 import { Container } from "@mui/material";
 
 // project components
-import MainNavigation from "./MainNavigation";
-
+const MainNavigation = dynamic(() => import("./MainNavigation"), { ssr: false });
 function Layout({ children }) {
   return (
     <div dir="rtl">

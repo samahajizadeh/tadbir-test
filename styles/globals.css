@@ -44,6 +44,7 @@ body {
   background-color: #faf7f4 !important;
   font-family: "IranYekan", sans-serif;
   font-weight: normal;
+  position: relative;
 }
 
 a {

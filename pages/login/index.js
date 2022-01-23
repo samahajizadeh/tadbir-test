@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -8,25 +8,24 @@ import { setCookies } from "cookies-next";
 
 // material-ui
 import { useTheme } from "@mui/material/styles";
-import {
-  Link,
-  Button,
-  Container,
-  Grid,
-  FormControl,
-  Typography,
-  InputLabel,
-  OutlinedInput,
-  InputAdornment,
-  IconButton,
-  FormHelperText,
-  Divider,
-  useMediaQuery,
-  Box,
-  Chip,
-  CircularProgress,
-} from "@mui/material";
+import Link from "@mui/material/Link";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import FormControl from "@mui/material/FormControl";
+import Typography from "@mui/material/Typography";
+import InputLabel from "@mui/material/InputLabel";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import FormHelperText from "@mui/material/FormHelperText";
+import CircularProgress from "@mui/material/CircularProgress";
+import Chip from "@mui/material/Chip";
+import Divider from "@mui/material/Divider";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 // project components
@@ -38,6 +37,7 @@ import classes from "../../styles/CustomPage.module.css";
 
 import bakgroundPage from "../../src/assets/images/bg1.jpg";
 import useHttp from "../../src/hook/useHttp";
+import UserContext from "../../src/store/UserContext";
 
 //styled material
 const RootDivider = styled("div")(({ theme }) => ({
@@ -60,6 +60,8 @@ const validationSchema = Yup.object().shape({
 const login = () => {
   const theme = useTheme();
   const breakpointMd = useMediaQuery(theme.breakpoints.down("md"));
+
+  const { setUserProfile } = useContext(UserContext);
 
   const [snackBar, setSnakbar] = useState({
     message: "",
@@ -85,11 +87,14 @@ const login = () => {
 
   const onSubmitLogin = async (data) => {
     const fetchData = (data) => {
+      const userProfile = data.data.user;
+      setUserProfile(userProfile);
+
       const token_value = data.data.token_detail;
       if (data.meta.code === 200 || data.status === "Success") {
         setCookies("token_arman", token_value.token);
         setCookies("refresh_tokent_arman", token_value.refresh_token);
-        router.push("/awards");
+        router.push("/");
       }
     };
 

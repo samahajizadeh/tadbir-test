@@ -13,8 +13,8 @@ import { CssBaseline, StyledEngineProvider } from "@mui/material";
 
 import LoadingScreen from "../src/components/UI/LoadingScreen";
 
-
 import { useRouter } from "next/router";
+import { UserProvider } from "../src/store/UserContext";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -42,7 +42,9 @@ export default function MyApp(props) {
       <RtlTheme>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          {!isLoading ? <Component {...pageProps} /> : <LoadingScreen />}
+          <UserProvider>
+            {!isLoading ? <Component {...pageProps} /> : <LoadingScreen />}
+          </UserProvider>
         </ThemeProvider>
       </RtlTheme>
     </StyledEngineProvider>
