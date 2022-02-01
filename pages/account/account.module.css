@@ -1,0 +1,15 @@
+.root {
+  margin: 40px !important;
+  direction: rtl;
+}
+
+.tableContainer{
+    border-radius: 12px!important;
+    box-shadow: none !important;
+    
+}
+
+/* .bankImg{
+    vertical-align: baseline ;
+} */
+
